@@ -1,0 +1,61 @@
+
+    // Step 1: Get the user's choice
+    const getUserChoice = userInput => {
+        userInput = userInput.toLowerCase();
+      
+        if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') {
+          return userInput;
+        } else {
+          console.log('Error: Please enter a valid choice (rock, paper, or scissors).');
+        }
+      };
+      
+     // console.log( getUserChoice('rock'));
+      
+      // Step 2: Get the computer's choice
+      const getComputerChoice = () => {
+        const randomNumber = Math.floor(Math.random() * 3);
+      
+        switch (randomNumber) {
+          case 0:
+            return 'rock';
+          case 1:
+            return 'paper';
+          case 2:
+            return 'scissors';
+        }
+      };
+      
+      // Step 3: Determine the winner
+      const determineWinner = (userChoice, computerChoice) => {
+        if (userChoice === computerChoice) {
+          return 'It is a tie!';
+        }
+      
+        if (userChoice === 'rock') {
+          return computerChoice === 'paper' ? 'Computer wins!' : 'You win!';
+        } else if (userChoice === 'paper') {
+          return computerChoice === 'scissors' ? 'Computer wins!' : 'You win!';
+        } else if (userChoice === 'scissors') {
+          return computerChoice === 'rock' ? 'Computer wins!' : 'You win!';
+        }
+      };
+      
+      // Step 4: Play the game
+      const playGame = () => {
+        const userChoice = getUserChoice('rock'); // You can change 'rock' to 'paper' or 'scissors'
+        const computerChoice = getComputerChoice();
+      
+        console.log(`User Choice: ${userChoice}`);
+        console.log(`Computer Choice: ${computerChoice}`);
+      
+        if (userChoice === 'bomb') {
+          console.log('You unleashed the secret cheat code! You win!');
+        } else {
+          console.log(determineWinner(userChoice, computerChoice));
+        }
+      };
+      
+      // Start the game
+      playGame();
+      
