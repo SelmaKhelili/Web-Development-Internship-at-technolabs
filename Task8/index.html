@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Define userName variable
+let userName = 'Selma'; // You can enter a name here like 'Jane'
+
+// Ternary expression to decide greeting based on user input
+userName ? console.log(`Hello, ${userName}!`) : console.log('Hello!');
+
+// Create userQuestion variable
+let userQuestion = "What is my future?"; // Change the question as needed
+
+// Log the user's question to the console
+console.log(`The user asked: ${userQuestion}`);
+
+// Generate a random number between 0 and 7
+let randomNumber = Math.floor(Math.random() * 8);
+
+// Create eightBall variable
+let eightBall = '';
+
+// Assign eightBall a reply based on the value of randomNumber
+switch (randomNumber) {
+  case 0:
+    eightBall = 'It is certain';
+    break;
+  case 1:
+    eightBall = 'It is decidedly so';
+    break;
+  case 2:
+    eightBall = 'Reply hazy try again';
+    break;
+  case 3:
+    eightBall = 'Cannot predict now';
+    break;
+  case 4:
+    eightBall = 'Do not count on it';
+    break;
+  case 5:
+    eightBall = 'My sources say no';
+    break;
+  case 6:
+    eightBall = 'Outlook not so good';
+    break;
+  case 7:
+    eightBall = 'Signs point to yes';
+    break;
+  default:
+    eightBall = 'Error: Invalid random number';
+}
+
+// Log the Magic Eight Ball's answer to the console
+console.log(`Magic Eight Ball says: ${eightBall}`);
+
+    </script>
+</body>
+</html>
